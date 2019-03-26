@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="61c16159-79f7-4f03-9077-632fa8839856" name="Default Changelist" comment="" />
+    <list default="true" id="61c16159-79f7-4f03-9077-632fa8839856" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/CodeCraft-2019.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/CodeCraft-2019.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CodeCraft-2019/com/huawei/DistandCount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CodeCraft-2019/com/huawei/Scheduling$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CodeCraft-2019/com/huawei/Scheduling$Carplace.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CodeCraft-2019/com/huawei/Scheduling$Carprio.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CodeCraft-2019/com/huawei/Scheduling$Waitqueue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CodeCraft-2019/com/huawei/Scheduling$roadbind.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CodeCraft-2019/com/huawei/Scheduling.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CodeCraft-2019/com/huawei/SolveByDirect.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CodeCraft-2019/com/huawei/SolveByDirect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/huawei/DistandCount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/huawei/Scheduling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/huawei/SchedulingSimulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/huawei/SolveByDirect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/huawei/SolveByDirect.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,24 +25,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/Scheduling.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/SchedulingSimulator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3266">
-              <caret line="288" column="51" lean-forward="true" selection-start-line="288" selection-start-column="51" selection-end-line="288" selection-end-column="51" />
-              <folding>
-                <element signature="method#prepared#0;class#Scheduling#0" />
-                <element signature="method#canChangeStatus#0;class#Scheduling#0" />
-              </folding>
+            <state relative-caret-position="1664">
+              <caret line="375" column="35" lean-forward="true" selection-start-line="375" selection-start-column="35" selection-end-line="375" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/FileUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+            <state relative-caret-position="-92">
+              <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -39,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/SolveByDirect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="34" column="46" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
+            <state relative-caret-position="314">
+              <caret line="47" column="45" lean-forward="true" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -68,14 +87,21 @@
         <option value="$PROJECT_DIR$/src/main/java/com/huawei/Sbytime.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/huawei/Solve.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/huawei/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/huawei/SolveByDirect.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/huawei/Scheduling.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huawei/SchedulingSimulator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huawei/SolveByDirect.java" />
       </list>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="69" />
-    <option name="y" value="561" />
+    <option name="x" value="284" />
+    <option name="y" value="66" />
     <option name="width" value="1400" />
     <option name="height" value="895" />
   </component>
@@ -85,15 +111,51 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CodeCraft-2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CodeCraft-2019" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CodeCraft-2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CodeCraft-2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CodeCraft-2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CodeCraft-2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CodeCraft-2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CodeCraft-2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CodeCraft-2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CodeCraft-2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="huawei" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553434254551" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553515222846" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -170,17 +232,18 @@
       <workItem from="1553078860335" duration="12543000" />
       <workItem from="1553131701325" duration="19515000" />
       <workItem from="1553170641854" duration="6948000" />
-      <workItem from="1553220724466" duration="41575000" />
+      <workItem from="1553220724466" duration="42391000" />
+      <workItem from="1553477610746" duration="24216000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161506000" />
+    <option name="totallyTimeSpent" value="186538000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="69" y="561" width="1400" height="895" extended-state="0" />
+    <frame x="284" y="66" width="1400" height="895" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21159638" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21536145" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -189,8 +252,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49849397" visible="true" weight="0.33829498" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991881" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49849397" weight="0.32341" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3986111" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -206,9 +269,9 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven" order="8" weight="0.32966322" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,27 +301,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/Sbytime.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/DistandCount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
-          <caret line="48" column="44" lean-forward="true" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/StringUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/FileUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -276,31 +322,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/SolveByDirect.java">
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/DistandCount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="34" column="46" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
+        <state relative-caret-position="1104">
+          <caret line="48" column="44" lean-forward="true" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/FileUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        <state relative-caret-position="-92">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/Scheduling.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/SolveByDirect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3266">
-          <caret line="288" column="51" lean-forward="true" selection-start-line="288" selection-start-column="51" selection-end-line="288" selection-end-column="51" />
-          <folding>
-            <element signature="method#prepared#0;class#Scheduling#0" />
-            <element signature="method#canChangeStatus#0;class#Scheduling#0" />
-          </folding>
+        <state relative-caret-position="314">
+          <caret line="47" column="45" lean-forward="true" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/SchedulingSimulator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1664">
+          <caret line="375" column="35" lean-forward="true" selection-start-line="375" selection-start-column="35" selection-end-line="375" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/huawei/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>

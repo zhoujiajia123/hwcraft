@@ -5,11 +5,11 @@ import java.util.*;
 public class SolveByDirect {
     private int[][] crossMatrix;
     private Map<Integer,int[]> roadMap;
-    private int[][] carFactor;
+    private Map<Integer,int[]> carMap;
     public void init( List<String> carList, List<String> roadList,List<String> crossList){
         crossMatrix=new int[crossList.size()][crossList.size()];
         roadMap=new HashMap<>();
-        carFactor=new int[carList.size()][5];
+        carMap=new HashMap<>();
         for(String s:roadList){
             int[] temp=StringUtil.splitString(s);
             int from=temp[4]-1,to=temp[5]-1;
@@ -17,67 +17,78 @@ public class SolveByDirect {
                 crossMatrix[to][from]=temp[0];
             }
             crossMatrix[from][to]=temp[0];
-            int[] temp2=new int[4];
-            for (int i = 0; i < temp2.length; i++) {
-                temp2[i]=temp[i+1];
-            }
-            temp2[3]=temp[6];
-            roadMap.put(temp[0],temp2);
+            roadMap.put(temp[0],temp);
         }
-        for (int i = 0; i < carFactor.length; i++) {
-            carFactor[i]=StringUtil.splitString(carList.get(i));
+        for (String s:carList){
+            int[] temp=StringUtil.splitString(s);
+            carMap.put(temp[0],temp);
         }
     }
     public List<List<Integer>> solve(){
-        Arrays.sort(carFactor,(a,b)->b[3]-a[3]);
+        List<Map.Entry<Integer,int[]>> list = new ArrayList<>(carMap.entrySet());
+        Collections.sort(list, new Comparator<Map.Entry<Integer, int[]>>() {
+            @Override
+            public int compare(Map.Entry<Integer, int[]> o1, Map.Entry<Integer, int[]> o2) {
+                return o2.getValue()[3]-o1.getValue()[3];
+            }
+        });
         List<List<Integer>> ans=new ArrayList<>();
         List<Integer> res;
-        List<Integer> driveTime=new ArrayList<>();
-        int wait=0;
-        for (int i = 0; i < carFactor.length; i++) {
+        int plan=0;
+        double wait=0;
+        int counter=0;
+        for (Map.Entry<Integer,int[]> entry:list) {
             List<Integer> roadCon=new ArrayList<>();
-            int t=0;
-            res=dijkstra(i,carFactor[i][1]-1,carFactor[i][2]-1);
+            int carid=entry.getKey(),from=entry.getValue()[1]-1,to=entry.getValue()[2]-1,plantime=entry.getValue()[4];
+            if (counter%300<200){
+                plan=0;
+            }else {
+                plan=2;
+            }
+            res=dijkstra(carid,from,to,plan);
             for (int j = 0; j < res.size()-1; j++) {
                 roadCon.add(crossMatrix[res.get(j)][res.get(j+1)]);
-                t+=roadMap.get(crossMatrix[res.get(j)][res.get(j+1)])[0]/Math.min(carFactor[i][3],roadMap.get(crossMatrix[res.get(j)][res.get(j+1)])[2]);
             }
-            driveTime.add(t);
-            t=0;
-            if (i<200){
-                roadCon.add(0,carFactor[i][0]);
-                roadCon.add(1,carFactor[i][4]);
-                System.out.println(carFactor[i][4]);
+            if (counter<300){
+                roadCon.add(0,carid);
+                roadCon.add(1,plantime);
+                System.out.println(plantime);
             }else {
-                if (i%200==0){
-                    //wait+=Collections.max(driveTime)/5;
-                    wait+=15;
-                    driveTime.clear();
+                if (counter%300==0){
+                    wait+=10+counter/300/2;
                 }
-                roadCon.add(0,carFactor[i][0]);
-                roadCon.add(1,wait+carFactor[i][4]);
-                System.out.println(wait+carFactor[i][4]);
+                roadCon.add(0,carid);
+                roadCon.add(1,(int)wait+plantime);
+                System.out.println(wait+plantime);
             }
             ans.add(roadCon);
+            counter++;
         }
         return ans;
     }
 
-    private List<Integer> dijkstra(int car,int from,int to){
+    private List<Integer> dijkstra(int car,int from,int to,int plan){
         int[][] x=new int[crossMatrix.length][crossMatrix.length];
         int[] D=new int[x.length];
         for (int i = 0; i < x.length; i++) {
             for (int j = 0; j < x.length; j++) {
                 if (crossMatrix[i][j]!=0){
-//                    if (car%2==3){
-//                        x[i][j]=roadMap.get(crossMatrix[i][j])[0]/(carFactor[car][3]<roadMap.get(crossMatrix[i][j])[1]?carFactor[car][3]:roadMap.get(crossMatrix[i][j])[1]);
-//                    }
-//                     if (car%2==1) {
-//                        x[i][j]=roadMap.get(crossMatrix[i][j])[0]/roadMap.get(crossMatrix[i][j])[2];
-//                    }
-//                    else {
-                        x[i][j]=roadMap.get(crossMatrix[i][j])[0]*5/roadMap.get(crossMatrix[i][j])[2];
-//                    }
+                    //过道路时间最短
+                    if (plan==0){
+                        x[i][j]=roadMap.get(crossMatrix[i][j])[1]/Math.min(carMap.get(car)[3],roadMap.get(crossMatrix[i][j])[2]);
+                    }
+                    //道路距离最短
+                    if (plan==1) {
+                        x[i][j]=roadMap.get(crossMatrix[i][j])[1]+Math.abs(carMap.get(car)[3]-roadMap.get(crossMatrix[i][j])[2])*2+1;
+                    }
+                    //距离加车道
+                    if (plan==2) {
+                        x[i][j]=roadMap.get(crossMatrix[i][j])[1]+10/roadMap.get(crossMatrix[i][j])[3];
+                    }
+                    //速度最匹配
+                    if (plan==3){
+                        x[i][j]=Math.abs(carMap.get(car)[3]-roadMap.get(crossMatrix[i][j])[2])*2+1;
+                    }
                 }else {
                     x[i][j]=Integer.MAX_VALUE;
                 }

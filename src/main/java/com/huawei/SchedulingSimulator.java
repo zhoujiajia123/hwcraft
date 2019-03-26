@@ -2,28 +2,21 @@ package com.huawei;
 
 import java.util.*;
 
-public class Scheduling {
+public class SchedulingSimulator {
     final int DIRECT = 1;
     final int LEFT = 2;
     final int RIGHT = 3;
-//邻接矩阵
 
     int[][] matrix;
     Map<Integer, int[]> carsdet;
     Map<Integer, int[]> roadsdet;
     TreeMap<Integer, int[]> crossdet;
-//每条道路对应的车辆队列
 
     Map<String, roadbind> carinroad = new HashMap<>();
-//车辆规划的道路顺序
-
     Map<Integer, List<Integer>> roadline;
-//车辆规划的路口顺序
-
     Map<Integer, List<Integer>> crossline;
 
-//创建道路的队列
-
+    /*创建道路，每个channel是一个队列*/
     public void prepared() {
         for (Map.Entry<Integer, int[]> entry : roadsdet.entrySet()) {
             List<LinkedList<Carplace>> roadqueue = new ArrayList<>();
@@ -40,11 +33,10 @@ public class Scheduling {
             }
         }
     }
-
-//调度开始
-
+    /*开始调度*/
     public void start() {
         for (int t = 1; ; t++) {
+
             /*为每辆车标记状态*/
             Map<String,PriorityQueue> waitcarsqueue=new HashMap<>();
             for (Map.Entry<String, roadbind> entry : carinroad.entrySet()) {
@@ -145,7 +137,7 @@ public class Scheduling {
             }
         }
     }
-
+    /*判断队列中车能否改变状态*/
     public boolean canChangeStatus(List<PriorityQueue<Carprio>> cross_road,Carprio carprio,int i,List<Carplace> change){
         boolean res=true;
         int place=-1;
@@ -286,7 +278,35 @@ public class Scheduling {
                 int roadid=roadline.get(carid).get(0);
                 int crossid=crossline.get(carid).get(0);
                 int channelid=0;
-                int drivelen=carsdet.get(carid)[1];
+                int roadlen=roadsdet.get(roadid)[1];
+                int roadnumth=1;
+                int crossnumth=1;
+                int nextroadid=roadline.get(carid).get(roadnumth);
+                int nextcrossid=crossline.get(carid).get(crossnumth);
+                int speed=Math.min(roadsdet.get(roadid)[2],carsdet.get(carid)[3]);
+                int drivelen=speed;
+                int status=0;
+                int[] dir=crossdet.get(crossid);
+                int direction=DIRECT;
+                int r1=0,r2=0;
+                for (int i = 1; i < dir.length; i++) {
+                    if (dir[i]==roadid){
+                        r1=i;
+                    }
+                    if (dir[i]==nextroadid){
+                        r2=i;
+                    }
+                }
+                if (Math.abs(r2-r1)==2){
+                    direction=DIRECT;
+                }
+                if (r2-r1==1||r2-r1==-3){
+                    direction=LEFT;
+                }
+                if (r2-r1==-1||r2-r1==3){
+                    direction=RIGHT;
+                }
+                int destination=carsdet.get(carid)[2];
             }
         }
     }
@@ -298,13 +318,13 @@ public class Scheduling {
         public int channelid;
         public int drivelen;
         public int roadlen;
-        public int direction;
         public int roadnumth;
         public int crossnumth;
         public int nextroadid;
+        public int nextcrossid;
         public int speed;
         public int status;
-        public int nextcrossid;
+        public int direction;
         public int destination;
 
 //        public Carplace(int carId, int driveLen, int roadLen, int speed, int destination, int direction, int roadnumth, int nextCross) {
